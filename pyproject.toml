@@ -1,0 +1,34 @@
+[project]
+name = "samoffs-workspace"
+version = "0.1.0"
+description = "uv workspace for SAM3 OFF-period training: samoffs[train] plus its pinned siblings."
+requires-python = ">=3.14"
+dependencies = [
+    "samoffs[train]",
+    "cnpix @ git+https://github.com/CSC-UW/cnpix.git@main",
+    "ecephys @ git+https://github.com/CSC-UW/ecephys.git@develop",
+    "wisc-ecephys-tools @ git+https://github.com/CSC-UW/wisc_ecephys_tools.git@main",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "ruff",
+    "ty",
+    "ipykernel>=6.31.0",
+]
+
+[tool.uv]
+constraint-dependencies = [
+    # Tesla V100 (sm_70) on tononi-2: the torch 2.9.1 cu128 wheels include sm_70;
+    # newer cu130 builds drop it.
+    "torch==2.9.1",
+]
+
+[tool.uv.sources]
+# The package developed here. `./samoffs` is a gitignored checkout of
+# https://github.com/CSC-UW/samoffs (clone it, or symlink an existing checkout).
+samoffs = { path = "./samoffs", editable = true }
+
+[tool.pytest.ini_options]
+testpaths = ["samoffs/tests"]
