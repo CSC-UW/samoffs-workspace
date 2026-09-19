@@ -581,7 +581,7 @@ wheels = [
 [[package]]
 name = "cnpix"
 version = "0.1.0"
-source = { git = "https://github.com/CSC-UW/cnpix.git?rev=main#95cea38e0d1bc4edf6a60f903fb064b514b90591" }
+source = { git = "https://github.com/CSC-UW/cnpix.git?rev=main#305d623a6b5623b3c4cb97cd2f39c80647506a59" }
 dependencies = [
     { name = "brainglobe-atlasapi" },
     { name = "click" },
@@ -3758,7 +3758,6 @@ train = [
     { name = "pycocotools" },
     { name = "sam3", extra = ["train"] },
     { name = "scikit-learn" },
-    { name = "termcolor" },
     { name = "torch" },
     { name = "torchvision" },
     { name = "zarr" },
@@ -3781,7 +3780,6 @@ requires-dist = [
     { name = "sam3", extras = ["train"], marker = "extra == 'train'", git = "https://github.com/CSC-UW/sam3.git?rev=873c095839c87f9e09cfa3061536ce814e4c96df" },
     { name = "scikit-learn", marker = "extra == 'train'" },
     { name = "spikeinterface" },
-    { name = "termcolor", marker = "extra == 'train'" },
     { name = "torch", marker = "extra == 'train'", specifier = ">=2.9" },
     { name = "torchvision", marker = "extra == 'train'" },
     { name = "wisc-ecephys-tools", git = "https://github.com/CSC-UW/wisc_ecephys_tools.git?rev=main" },
@@ -4562,7 +4560,7 @@ wheels = [
 [[package]]
 name = "wisc-ecephys-tools"
 version = "0.1.1"
-source = { git = "https://github.com/CSC-UW/wisc_ecephys_tools.git?rev=main#fc6dd9acdbc9ba33ae3085016968c2f289cf41aa" }
+source = { git = "https://github.com/CSC-UW/wisc_ecephys_tools.git?rev=main#9a812bd0167b5fe3101921b3b393a9fa89f266b7" }
 dependencies = [
     { name = "altair" },
     { name = "brainglobe-atlasapi" },
